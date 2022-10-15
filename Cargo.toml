@@ -1,0 +1,20 @@
+[package]
+name = "numpy_mmap"
+description = "Create and load `.npy` files, through mmap."
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository= "https://github.com/zommiommy/numpy_mmap"
+authors = [
+    "Tommaso Fontana <tommaso.fontana.96@gmail.com>"    
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mmap = {path="./mmap"}
+libc = "*"
+regex = "1"
+pyo3 = { version = "0.17", features = ["extension-module"] }
+numpy = { version = "0.17", features = ["half"] }
+half = "2.1.0"

@@ -1,0 +1,22 @@
+[package]
+name = "example"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository= "https://github.com/zommiommy/numpy_mmap"
+authors = [
+    "Tommaso Fontana <tommaso.fontana.96@gmail.com>"    
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust_numpy = {path=".."}
+
+[lib]
+name = "example"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.16"
+features = ["extension-module", "abi3", "abi3-py37", "macros", "multiple-pymethods"]
