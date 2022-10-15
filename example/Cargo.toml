@@ -11,12 +11,13 @@ authors = [
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rust_numpy = {path=".."}
+numpy_mmap = {path=".."}
+numpy = { version = "0.17", features = ["half"] }
 
 [lib]
 name = "example"
 crate-type = ["cdylib"]
 
 [dependencies.pyo3]
-version = "0.16"
+version = "0.17"
 features = ["extension-module", "abi3", "abi3-py37", "macros", "multiple-pymethods"]
